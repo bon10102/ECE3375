@@ -49,12 +49,12 @@ int readPb()
  */
 int readSwitches()
 {
-    return *(swPtr)&0x7; //mask with '111' because we only care about the 1st switch
+    return *(swPtr)&0x7; //mask with '111' to receive output from first three switches
 }
 
 /**
  * Concatenates an array of 6 integers into 1
- * @param arr the array of integers to be concatenated
+ * @param arr the array of integers to be concatenated, arr[0] is the highest order integer
  * @return the formed integer
  */
 int concat(volatile int arr[])
